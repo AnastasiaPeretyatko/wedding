@@ -51,10 +51,19 @@
   background-size: cover;
 }
 
-.name {
+h1 .name {
   font-family: 'Great Vibes', cursive;
   font-weight: normal;
-  font-size: 1.7em !important;
+  font-size: 1.2em !important;
+
+  @media (min-width: 600px) {
+    font-size: 2em !important;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 1em !important;
+    
+  }
 }
 
 .plus {
