@@ -1,9 +1,8 @@
-import type { Metadata } from "next";
-import "./globals.css";
-
+import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Женя + Настя",
+  title: 'Женя + Настя',
 };
 
 export default function RootLayout({
@@ -13,9 +12,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
