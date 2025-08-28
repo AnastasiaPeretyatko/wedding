@@ -67,8 +67,13 @@ export default function Home() {
         <h1>Тайминг</h1>
         <div>
           <span style={{ fontSize: '1.5em', color: '#8f995f' }}>♥</span>
+          <h2 className={styles.time}>13:30</h2>
+          <p>Сбор гостей в домике (по желанию)</p>
+        </div>
+        <div>
+          <span style={{ fontSize: '1.5em', color: '#8f995f' }}>♥</span>
           <h2 className={styles.time}>14:30</h2>
-          <p>Сбор гостей у ЗАГСа</p>
+          <p>Сбор гостей у ЗАГСа (по желанию)</p>
         </div>
         <div>
           <span style={{ fontSize: '1.5em', color: '#8f995f' }}>♥</span>
