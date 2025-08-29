@@ -72,23 +72,20 @@ h1 .name {
   font-size: 2em !important;
 }
 
-.plus.green {
-  color: rgb(101, 146, 109);
-}
+.green.name, .plus {
+  color: var(--green-black);
 
-.name.green {
-  color: rgb(68, 109, 68);
 }
 
 .name.pink {
-  color: rgb(168, 115, 124);
+  color: var(--orange-black);
 }
 
 .date {
   font-family: 'Great Vibes', cursive !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   font-size: 2.3em !important;
-  color: var(--swamp-color);
+  color: var(--green-black);
   margin-bottom: 15px;
   letter-spacing: 2px;
 }
@@ -105,7 +102,7 @@ h1 .name {
   }
 
   & td:nth-child(5) {
-    border: 2px dashed var(--swamp-color);
+    border: 2px dashed var(--green-black);
     border-radius: 15px;
   }
 }
@@ -116,11 +113,11 @@ h1 .name {
     border-radius: 0;
   }
   & td:nth-child(n + 5):nth-child(-n + 7) {
-    border: 2px dashed var(--swamp-color);
+    border: 2px dashed var(--green-black);
     border-left: none;
     &:nth-child(5) {
       border-radius: 15px 0 0 15px;
-      border-left: 2px dashed var(--swamp-color);
+      border-left: 2px dashed var(--green-black);
       border-right: none;
     }
     &:nth-child(6) {
@@ -129,7 +126,7 @@ h1 .name {
     }
     &:nth-child(7) {
       border-radius: 0 15px 15px 0;
-      border-right: 2px dashed var(--swamp-color);
+      border-right: 2px dashed var(--green-black);
     }
   }
 }
@@ -154,4 +151,11 @@ h1 .name {
   font-family: 'Great Vibes', cursive;
   font-weight: normal;
   font-size: 2.5em;
+}
+
+h1.description {
+  font-size: 2.5em;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 500;
+  color: var(--orange-black)
 }

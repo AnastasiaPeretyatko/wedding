@@ -4,6 +4,12 @@
   --background: #d9e2cf;
   --foreground: #1f1f1fd7;
   --swamp-color: #8f995f;
+
+  --green-black: #4C5C13;
+  --green-light: #D9E694;
+
+  --orange-black: #E6543B;
+  --orange-light: #F3CCAF;
 }
 
 * {
