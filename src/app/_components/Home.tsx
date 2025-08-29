@@ -142,9 +142,7 @@ export default function Home() {
       <div className={styles.photo} />
 
       <div className={styles.block}>
-        <h1 className={styles.description}>
-          С любовью. <br /> Женя и Настя!
-        </h1>
+        <h4 className={styles.description}>С любовью. Женя и Настя!</h4>
       </div>
     </div>
   );
