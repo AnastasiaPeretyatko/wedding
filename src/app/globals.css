@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
 :root {
   --background: #d9e2cf;
@@ -23,8 +24,11 @@ body {
   margin: auto;
   max-width: 600px;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: var(--foreground);
+  
+  & p {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.4;
+  }
 }
