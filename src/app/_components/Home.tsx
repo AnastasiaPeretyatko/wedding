@@ -4,7 +4,6 @@ import { useSearchParams } from 'next/navigation';
 import styles from './home.module.css';
 import classNames from 'classnames';
 import YandexMap from './YandexMap';
-import Image from 'next/image';
 
 export default function Home() {
   const searchParams = useSearchParams();
