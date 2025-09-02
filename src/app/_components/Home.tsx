@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import styles from './home.module.css';
 import classNames from 'classnames';
 import YandexMap from './YandexMap';
+import Image from 'next/image';
 
 export default function Home() {
   const searchParams = useSearchParams();
@@ -12,7 +13,10 @@ export default function Home() {
 
   return (
     <div className={styles.main}>
-      <div className={styles.photo} />
+      <div className={styles.photo}>
+        <div className={styles.evn}/>
+        <div className={styles.anst}/>
+      </div>
 
       <div className={styles.block}>
         <h1>
@@ -21,7 +25,7 @@ export default function Home() {
           <em className={classNames(styles.name, styles.pink)}>Настя</em>
         </h1>
 
-        <p>Дорогие родные и близкие, мы женимся и мечтаем разделить этот день вместе с Вами!</p>
+        <p>Дорогие родные и близкие! Мы женимся и мечтаем разделить этот день вместе с вами.</p>
       </div>
 
       <div className={styles.block}>
@@ -65,17 +69,23 @@ export default function Home() {
         <div>
           <span style={{ fontSize: '1.5em', color: '#8f995f' }}>♥</span>
           <h2 className={styles.time}>13:30</h2>
-          <p>Сбор гостей в домике (по желанию)</p>
+          <p>Сбор гостей в домике <br/>(подготовка к ЗАГСу и выкуп невесты)</p>
         </div>
         <div>
           <span style={{ fontSize: '1.5em', color: '#8f995f' }}>♥</span>
           <h2 className={styles.time}>14:30</h2>
-          <p>Сбор гостей у ЗАГСа (по желанию)</p>
+          <p>Сбор гостей у ЗАГСа</p>
         </div>
         <div>
           <span style={{ fontSize: '1.5em', color: '#8f995f' }}>♥</span>
           <h2 className={styles.time}>15:00</h2>
-          <p>Церемония регистрации</p>
+          <p>Начало церемонии <br/> регистрации</p>
+        </div>
+
+        <div>
+          <span style={{ fontSize: '1.5em', color: '#8f995f' }}>♥</span>
+          <h2 className={styles.time}>15:30</h2>
+          <p>Встреча с родителями жениха <br/> в отчем доме</p>
         </div>
 
         <div>
@@ -83,7 +93,10 @@ export default function Home() {
           <h2 className={styles.time}>17:30</h2>
           <p>Банкет</p>
         </div>
+        <p style={{marginTop: '1em', fontStyle: 'italic', fontSize: '0.95em'}}>* Дорогие гости, все этапы до банкета носят свободный характер. Самое важное – мы будем ждать вас на праздничном ужине в 17:30!</p>
       </div>
+
+
 
       <div className={styles.block}>
         <h1>Локация ЗАГСа</h1>
@@ -104,42 +117,52 @@ export default function Home() {
             <span style={{ fontSize: '1.5em', color: '#8f995f' }}>♥</span>
             <h2>Проживание</h2>
             <p>
-              Мы хотим чтобы все гости чувствовали себя комфортно, поэтому для Вас будет
-              организовано проживание в доме для продолжения празднования до воскресенья.
+              Мы хотим, чтобы все гости чувствовали себя комфортно, поэтому для вас будет организовано проживание в доме, чтобы продолжить празднование до воскресенья.
             </p>
 
             <span style={{ fontSize: '1.5em', color: '#8f995f' }}>♥</span>
             <h2>Развлечения</h2>
             <p>
-              После завершения официальной части мероприятия в нашем распоряжении бассейн и в пешей
-              доступности море, возьмите всё необходимое для веселого отдыха!
+              После завершения официальной части мероприятия в нашем распоряжении будет бассейн, а в пешей доступности — море. Возьмите всё необходимое для весёлого отдыха!
             </p>
           </>
         )}
 
+        {
+          !isLiving && (
+            <>
+              <span style={{ fontSize: '1.5em', color: '#8f995f' }}>♥</span>
+              <h2>Транспорт</h2>
+              <p>
+                Мы позаботимся о вашем комфорте и закажем такси в обе стороны. Будем благодарны, если за день вы сообщите, к какому этапу праздника планируете присоединиться.
+              </p>
+            </>
+          )
+        }
+
         <span style={{ fontSize: '1.5em', color: '#8f995f' }}>♥</span>
         <h2>Дресс-код</h2>
         <p>
-          Мы не хотим ограничивать Вас в цветовой гамме, поэтому выбирайте те образы, в которых
-          будете чувствовавать себя на 100 баллов!
+          Мы не хотим ограничивать вас в цветовой гамме, поэтому выбирайте те образы, в которых будете чувствовать себя на все 100!
         </p>
 
         <span style={{ fontSize: '1.5em', color: '#8f995f' }}>♥</span>
         <h2>Подарки</h2>
         <p>
-          Мы не хотим обременять Вас выбором подарка, поэтому будем очень рады вкладу в бюджет нашей
-          молодой семьи.
+          Мы не хотим обременять вас выбором подарка, поэтому будем очень рады любому вкладу в бюджет нашей молодой семьи.
         </p>
 
         <span style={{ fontSize: '1.5em', color: '#8f995f' }}>♥</span>
         <h2>Пожелания</h2>
         <p>
-          Будем благодарны если Вы воздержитесь от криков &quot;Горько!&quot; на празднике, ведь
-          поцелуй - это знак выражения чувств, и он не может быть исполнен по заказу.
+          Будем благодарны, если вы воздержитесь от криков &quot;Горько!&quot; на празднике, ведь
+          поцелуй - это знак выражения чувств, и его невозможно исполнить по заказу.
         </p>
       </div>
 
-      <div className={styles.photo} />
+      <div className={styles.photo}>
+        <div className={styles.image}/>
+      </div>
 
       <div className={styles.block}>
         <h4 className={styles.description}>С любовью. Женя и Настя!</h4>

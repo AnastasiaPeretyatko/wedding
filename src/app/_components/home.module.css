@@ -47,8 +47,15 @@
   color: black;
   width: 100%;
   height: 300px;
-  background-color: rgb(201, 201, 201);
   background-size: cover;
+  background-image: url('/heart.png');
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 h1 .name {
@@ -62,7 +69,7 @@ h1 .name {
 
   @media (max-width: 350px) {
     font-size: 1em !important;
-    
+
   }
 }
 
@@ -72,7 +79,8 @@ h1 .name {
   font-size: 2em !important;
 }
 
-.green.name, .plus {
+.green.name,
+.plus {
   color: var(--green-black);
 
 }
@@ -93,8 +101,10 @@ h1 .name {
 .calendar {
   width: 100%;
 }
+
 .calendar .table {
   width: 100%;
+
   & th,
   td {
     text-align: center;
@@ -112,18 +122,22 @@ h1 .name {
     border: none;
     border-radius: 0;
   }
+
   & td:nth-child(n + 5):nth-child(-n + 7) {
     border: 2px dashed var(--green-black);
     border-left: none;
+
     &:nth-child(5) {
       border-radius: 15px 0 0 15px;
       border-left: 2px dashed var(--green-black);
       border-right: none;
     }
+
     &:nth-child(6) {
       border-left: none;
       border-right: none;
     }
+
     &:nth-child(7) {
       border-radius: 0 15px 15px 0;
       border-right: 2px dashed var(--green-black);
@@ -154,8 +168,62 @@ h1 .name {
 }
 
 h4.description {
-  font-size: 1.7em;
+  font-size: 2em;
   font-family: 'Great Vibes', cursive;
   font-weight: 500;
   color: var(--orange-black)
+}
+
+.anst {
+  content: "";
+  width: 20%;
+  max-width: 30%;
+  height: 250px;
+  background-size: cover;
+  background-image: url('/photo_2025-09-02_23-06-31.png');
+  background-position: center;
+
+  @media (max-width: 600px) {
+    max-width: 150px;
+    width: 130px;
+
+    height: 80%;
+  }
+}
+
+.evn {
+  content: "";
+  width: 20%;
+  max-width: 30%;
+  height: 290px;
+  background-size: cover;
+  background-image: url('/-2147483648_-210680.webp');
+  background-position: center;
+
+  @media (max-width: 600px) {
+    max-width: 150px;
+    width: 130px;
+
+    height: 80%;
+  }
+}
+
+.image {
+  content: "";
+  /* position: absolute; */
+  background-image: url('/-2147483648_-210684.png');
+  top: 10%;
+  left: 25%;
+  max-width: 50%;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: 600px) {
+    max-width: 250px;
+    width: 250px;
+
+    height: 80%;
+  }
 }
