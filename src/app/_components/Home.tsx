@@ -175,7 +175,9 @@ export default function Home() {
       </div>
 
       <div className={styles.block}>
-        <h4 className={styles.description}>С любовью, Женя и Настя!</h4>
+        <h4 className={styles.description}>
+          С любовью, <br /> Женя и Настя!
+        </h4>
       </div>
     </div>
   );
