@@ -123,7 +123,7 @@ h1 .name {
     border-radius: 0;
   }
 
-  & td:nth-child(n + 5):nth-child(-n + 7) {
+  & td:nth-child(n + 5):nth-child(-n + 6) {
     border: 2px dashed var(--green-black);
     border-left: none;
 
@@ -134,11 +134,6 @@ h1 .name {
     }
 
     &:nth-child(6) {
-      border-left: none;
-      border-right: none;
-    }
-
-    &:nth-child(7) {
       border-radius: 0 15px 15px 0;
       border-right: 2px dashed var(--green-black);
     }
