@@ -190,7 +190,7 @@ h4.description {
   content: "";
   width: 20%;
   max-width: 30%;
-  height: 290px;
+  height: 300px;
   background-size: cover;
   background-image: url('/-2147483648_-210680.webp');
   background-position: center;
@@ -199,7 +199,7 @@ h4.description {
     max-width: 150px;
     width: 130px;
 
-    height: 80%;
+    height: 90%;
   }
 }
 
